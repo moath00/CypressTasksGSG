@@ -13,6 +13,13 @@ class addEmployee {
         this.elements.loginDetailsFields().eq(2).type(MiddleName);
         this.elements.loginDetailsFields().eq(3).type(LastName);
         this.elements.AddEmp().click();
+
+        let gottenID;
+        cy.get('.oxd-input').eq(4).invoke('text').then((text) => {
+            console.log(text);
+            gottenID = text;
+        });
+        return gottenID;
     }
 
     addNewEmployeeWithLoginInfo(firstName:string, MiddleName:string, LastName:string, Username:string, Password:string){
@@ -24,6 +31,12 @@ class addEmployee {
         this.elements.loginDetailsFields().eq(6).type(Password, {force:true});
         this.elements.loginDetailsFields().eq(7).type(Password, {force:true});
         this.elements.AddEmp().click();
+
+        let gottenID;
+        cy.get('.oxd-input').eq(4).invoke('text').then((text) => {
+            gottenID = text;
+        });
+        return gottenID;
     }
 
 }
