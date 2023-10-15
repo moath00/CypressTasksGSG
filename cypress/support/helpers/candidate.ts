@@ -19,9 +19,9 @@ export default class Candidates {
 
     scheduleInterviewPage() {
         return {
-            interviewTitle: () => cy.get(':nth-child(2) > .oxd-grid-3 > :nth-child(1) > .oxd-input-group > :nth-child(2) > .oxd-input'),
-            interviewer: () => cy.get('.oxd-autocomplete-text-input > input'),
-            dateInput: () => cy.get('.oxd-date-input > .oxd-input'),
+            interviewTitle: () => cy.get('.oxd-input').eq(5),
+            interviewer: () => cy.get('[include-employees="onlyCurrent"]'),
+            dateInput: () => cy.get('.oxd-input').eq(6),
             saveBTN: () => cy.get('.oxd-button--secondary').contains('Save'),
             autocompleteOption: () => cy.get('.oxd-autocomplete-option'),
             selectOption: () => cy.get('.oxd-select-option')

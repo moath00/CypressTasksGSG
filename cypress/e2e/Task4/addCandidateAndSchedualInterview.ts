@@ -21,8 +21,8 @@ describe('Adding candidate by API then apply for scheduled interview', () => {
 
         cy.get('@candidateInfo').then((candidateData) => {
             // add candidate via API
-            candidate.addCandidateViaAPI(candidateData.data).then((res: any) => {
-                let id = res.data.id;
+            candidate.addCandidateViaAPI(candidateData.data).then((response: any) => {
+                let id = response.data.id;
 
                 // change candidate status to shortlisted using API
                 cy.api({
@@ -37,7 +37,7 @@ describe('Adding candidate by API then apply for scheduled interview', () => {
                 // fill the required fields
                 candidate.scheduleInterviewPage().interviewTitle().type('Quality Assurance Interview');
                 candidate.scheduleInterviewPage().interviewer().type('m');
-                cy.wait(1000);
+                cy.wait(2000);
                 candidate.scheduleInterviewPage().autocompleteOption().eq(0).click();
                 candidate.scheduleInterviewPage().dateInput().type('2023-10-20');
                 candidate.scheduleInterviewPage().saveBTN().click();
