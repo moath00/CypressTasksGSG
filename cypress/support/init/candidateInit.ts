@@ -10,7 +10,7 @@ export default class candidateInit{
             contactNumber: data.contactNumber,
             keywords: '',
             comment: '',
-            dateOfApplication: "2023-10-14",
+            dateOfApplication: "2023-10-21",
             consentToKeepData: false,
             vacancyId: data.vacancyId
 
