@@ -16,6 +16,7 @@ class LogIn {
     logOutLoggedUser() {
         this.elements.logoutList().click();
         this.elements.logoutBtn().click();
+        cy.clearCookies();
     }
 }
 
