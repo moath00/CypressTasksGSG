@@ -3,7 +3,7 @@ class RoutePage {
         pages: () => cy.get('.oxd-main-menu-item-wrapper')
     };
 
-    router(page: number): void {
+    barPageNumber(page: number): void {
         this.elements.pages().eq(page-1).click();
     }
 }

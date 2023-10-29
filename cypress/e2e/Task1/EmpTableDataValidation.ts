@@ -18,7 +18,7 @@ describe("Employee's Table data validation - Add Employee", function() {
         // log in admin
         loggedIn.passedLogin("Admin", "admin123");
         // visit PIM page from the sidebar
-        router.router(2);
+        router.barPageNumber(2);
         // click on add button to add employee
         cy.get('[data-v-10d463b7]').eq(2).click({ force: true });
         // gottenID = addEmp.addNewEmployeeWithoutLoginInfo("Moath", "M.", "Hjjawi");
