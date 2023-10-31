@@ -1,0 +1,10 @@
+{
+    "leaveTypeId": 9,
+    "fromDate": "2023-11-20",
+    "toDate": "2023-11-24",
+    "comment": "Working days",
+    "duration": {
+        "type": "half_day_morning"
+    },
+    "partialOption": "all"
+}
