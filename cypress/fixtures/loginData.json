@@ -4,5 +4,7 @@
     "wrongUsername": "test",
     "wrongPassword": "test123",
     "emptyUsername": "",
-    "emptyPassword": ""
+    "emptyPassword": "",
+    "employeeUsername": "moath",
+    "employeePassword": "moath123"
 }

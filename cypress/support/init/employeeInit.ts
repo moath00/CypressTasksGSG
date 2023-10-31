@@ -7,7 +7,7 @@ export default class employeeInit{
             middleName: data.middleName,
             lastName: data.lastName,
             empPicture: '',
-            employeeId: 270
+            employeeId: data.employeeId
         }
     }
 }

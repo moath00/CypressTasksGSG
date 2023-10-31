@@ -12,12 +12,7 @@ export default class PIM {
     }
 
     createEmployeeViaAPIwithLoginInfo(data: any) {
-        const addEmployee = cy.addEmployeePIM(URLs.addEmployee, employeeInit.initEmployee(data));
-        const loginInfo = cy.addEmployeeLoginInfo(URLs.employeeLoginInfo, employeeLoginInfoInit.initLoginInfo(data));
-        return {
-            addEmployee: addEmployee,
-            loginInfo: loginInfo
-        }
+        return cy.addEmployeeLoginInfo(URLs.employeeLoginInfo, employeeLoginInfoInit.initLoginInfo(data));
     }
 
     addEmployeeBtn() {

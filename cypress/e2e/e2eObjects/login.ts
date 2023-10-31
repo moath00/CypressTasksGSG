@@ -14,9 +14,15 @@ class LogIn {
     };
 
     logOutLoggedUser() {
-        this.elements.logoutList().click();
-        this.elements.logoutBtn().click();
-        cy.clearCookies();
+        // this.elements.logoutList().click();
+        // this.elements.logoutBtn().click();
+        cy.intercept(
+            "https://opensource-demo.orangehrmlive.com/web/index.php/core/i18n/messages**"
+          ).as("messages");
+          cy.get(".oxd-userdropdown-tab").click();
+          cy.contains("[role=menuitem]", "Logout").click();
+        
+          cy.wait("@messages")
     }
 }
 
